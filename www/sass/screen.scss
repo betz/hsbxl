@@ -1,0 +1,46 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+
+
+body {
+	background: #000 url(../images/photo3.jpg) fixed;
+  
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+body > .container {
+  background: #fff;
+  padding: 20px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.hero-unit {
+  padding: 20px 60px 30px;
+}
+.carousel-control {
+  top: 47%;
+}
+.carousel-inner {
+  .item {
+    margin: 0 20px;
+  }
+}
+
+.footer {
+  font-size: 12px;
+  font-style: italic;
+}
+
+
+@media (max-width: 979px) {
+  body {
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+}
