@@ -18,33 +18,44 @@ body > .container {
   border-radius: 6px;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
+.navbar-form input {
+  width: 110px;
+}
+
+/* line 29, ../sass/screen.scss */
 .hero-unit {
   padding: 20px 60px 30px;
 }
-/* line 25, ../sass/screen.scss */
+/* line 31, ../sass/screen.scss */
 .hero-unit h1 {
   margin-bottom: 5px;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .carousel-control {
   top: 47%;
 }
 
-/* line 33, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .carousel-inner .item {
   margin: 0 20px;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 44, ../sass/screen.scss */
 .footer {
   font-size: 12px;
   font-style: italic;
 }
 
+@media (min-width: 1200px) {
+  /* line 51, ../sass/screen.scss */
+  .navbar-form input {
+    width: 156px;
+  }
+}
 @media (max-width: 979px) {
-  /* line 45, ../sass/screen.scss */
+  /* line 59, ../sass/screen.scss */
   body {
     padding-top: 0;
     padding-bottom: 20px;

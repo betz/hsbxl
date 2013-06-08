@@ -20,6 +20,12 @@ body > .container {
   border-radius: 6px;
 }
 
+.navbar-form {
+  input {
+    width: 110px;
+  }
+}
+
 .hero-unit {
   padding: 20px 60px 30px;
   h1 {
@@ -40,6 +46,14 @@ body > .container {
   font-style: italic;
 }
 
+@media (min-width: 1200px) {
+  .navbar-form {
+    input {
+      width: 156px;
+    }
+  }
+}
+
 
 @media (max-width: 979px) {
   body {
@@ -47,3 +61,4 @@ body > .container {
     padding-bottom: 20px;
   }
 }
+
