@@ -48,14 +48,20 @@ body > .container {
   font-style: italic;
 }
 
+@media (max-width: 600px) {
+  /* line 50, ../sass/screen.scss */
+  #myCarousel {
+    display: none;
+  }
+}
 @media (min-width: 1200px) {
-  /* line 51, ../sass/screen.scss */
+  /* line 57, ../sass/screen.scss */
   .navbar-form input {
     width: 156px;
   }
 }
 @media (max-width: 979px) {
-  /* line 59, ../sass/screen.scss */
+  /* line 65, ../sass/screen.scss */
   body {
     padding-top: 0;
     padding-bottom: 20px;

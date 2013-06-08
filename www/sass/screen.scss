@@ -46,6 +46,12 @@ body > .container {
   font-style: italic;
 }
 
+@media (max-width: 600px) {
+  #myCarousel {
+    display: none;
+  }
+}
+
 @media (min-width: 1200px) {
   .navbar-form {
     input {
