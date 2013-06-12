@@ -43,25 +43,48 @@ body > .container {
 }
 
 /* line 44, ../sass/screen.scss */
+h1 {
+  margin-bottom: 30px;
+}
+
+/* line 49, ../sass/screen.scss */
+.projects h2 {
+  font-size: 23px;
+}
+/* line 52, ../sass/screen.scss */
+.projects img {
+  margin-bottom: 20px;
+}
+/* line 55, ../sass/screen.scss */
+.projects .description {
+  height: 60px;
+  overflow: hidden;
+}
+/* line 59, ../sass/screen.scss */
+.projects .topbutton {
+  margin-top: 30px;
+}
+
+/* line 64, ../sass/screen.scss */
 .footer {
   font-size: 12px;
   font-style: italic;
 }
 
 @media (max-width: 600px) {
-  /* line 50, ../sass/screen.scss */
+  /* line 70, ../sass/screen.scss */
   #myCarousel {
     display: none;
   }
 }
 @media (min-width: 1200px) {
-  /* line 57, ../sass/screen.scss */
+  /* line 77, ../sass/screen.scss */
   .navbar-form input {
     width: 156px;
   }
 }
 @media (max-width: 979px) {
-  /* line 65, ../sass/screen.scss */
+  /* line 85, ../sass/screen.scss */
   body {
     padding-top: 0;
     padding-bottom: 20px;

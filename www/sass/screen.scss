@@ -41,6 +41,26 @@ body > .container {
   }
 }
 
+h1 {
+  margin-bottom: 30px;
+}
+
+.projects {
+  h2 {
+    font-size: 23px;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+  .description {
+    height: 60px;
+    overflow: hidden;
+  }
+  .topbutton {
+    margin-top: 30px;
+  }
+}
+
 .footer {
   font-size: 12px;
   font-style: italic;
