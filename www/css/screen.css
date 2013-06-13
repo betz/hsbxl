@@ -49,7 +49,7 @@ h1 {
 
 /* line 49, ../sass/screen.scss */
 .projects h2 {
-  font-size: 23px;
+  font-size: 21px;
 }
 /* line 52, ../sass/screen.scss */
 .projects img {
@@ -64,27 +64,31 @@ h1 {
 .projects .topbutton {
   margin-top: 30px;
 }
+/* line 62, ../sass/screen.scss */
+.projects .span2 {
+  width: 166px !important;
+}
 
-/* line 64, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
 .footer {
   font-size: 12px;
   font-style: italic;
 }
 
 @media (max-width: 600px) {
-  /* line 70, ../sass/screen.scss */
+  /* line 73, ../sass/screen.scss */
   #myCarousel {
     display: none;
   }
 }
 @media (min-width: 1200px) {
-  /* line 77, ../sass/screen.scss */
+  /* line 80, ../sass/screen.scss */
   .navbar-form input {
     width: 156px;
   }
 }
 @media (max-width: 979px) {
-  /* line 85, ../sass/screen.scss */
+  /* line 88, ../sass/screen.scss */
   body {
     padding-top: 0;
     padding-bottom: 20px;
