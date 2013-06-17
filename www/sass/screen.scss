@@ -4,6 +4,10 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 
+html {
+  overflow-y: scroll;
+}
+
 
 body {
 	background: #000 url(../images/photo3.jpg) fixed;
@@ -47,7 +51,10 @@ h1 {
 
 .projects {
   h2 {
-    font-size: 21px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
   }
   img {
     margin-bottom: 20px;
@@ -60,7 +67,16 @@ h1 {
     margin-top: 30px;
   }
   .span2 {
-    width: 166px !important;
+    /*width: 166px !important;*/
+  }
+}
+
+.gallery {
+  img {
+    height: 60px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
   }
 }
 

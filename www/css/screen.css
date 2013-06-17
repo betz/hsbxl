@@ -2,14 +2,19 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 8, ../sass/screen.scss */
+/* line 7, ../sass/screen.scss */
+html {
+  overflow-y: scroll;
+}
+
+/* line 12, ../sass/screen.scss */
 body {
   background: black url(../images/photo3.jpg) fixed;
   padding-top: 60px;
   padding-bottom: 40px;
 }
 
-/* line 15, ../sass/screen.scss */
+/* line 19, ../sass/screen.scss */
 body > .container {
   background: #fff;
   padding: 20px;
@@ -18,77 +23,88 @@ body > .container {
   border-radius: 6px;
 }
 
-/* line 24, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 .navbar-form input {
   width: 110px;
 }
 
-/* line 29, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 .hero-unit {
   padding: 20px 60px 30px;
 }
-/* line 31, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 .hero-unit h1 {
   margin-bottom: 5px;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 .carousel-control {
   top: 47%;
 }
 
-/* line 39, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 .carousel-inner .item {
   margin: 0 20px;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 h1 {
   margin-bottom: 30px;
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 .projects h2 {
-  font-size: 21px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
 }
-/* line 52, ../sass/screen.scss */
+/* line 59, ../sass/screen.scss */
 .projects img {
   margin-bottom: 20px;
 }
-/* line 55, ../sass/screen.scss */
+/* line 62, ../sass/screen.scss */
 .projects .description {
   height: 60px;
   overflow: hidden;
 }
-/* line 59, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .projects .topbutton {
   margin-top: 30px;
 }
-/* line 62, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 .projects .span2 {
-  width: 166px !important;
+  /*width: 166px !important;*/
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
+.gallery img {
+  height: 60px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+/* line 83, ../sass/screen.scss */
 .footer {
   font-size: 12px;
   font-style: italic;
 }
 
 @media (max-width: 600px) {
-  /* line 73, ../sass/screen.scss */
+  /* line 89, ../sass/screen.scss */
   #myCarousel {
     display: none;
   }
 }
 @media (min-width: 1200px) {
-  /* line 80, ../sass/screen.scss */
+  /* line 96, ../sass/screen.scss */
   .navbar-form input {
     width: 156px;
   }
 }
 @media (max-width: 979px) {
-  /* line 88, ../sass/screen.scss */
+  /* line 104, ../sass/screen.scss */
   body {
     padding-top: 0;
     padding-bottom: 20px;
