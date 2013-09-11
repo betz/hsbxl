@@ -1,0 +1,51 @@
+
+
+body {
+	background: #000;
+	color: #fff;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+	color: #fff;
+}
+
+h1 {
+  text-align: center;
+}
+
+.logo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: auto;
+}
+
+.logo img {
+  width: 250px;
+}
+
+ul {
+	margin: 5px;
+	padding: 5px;
+}
+
+.bx-wrapper .bx-viewport {
+	background: #000;
+	border: 0;
+	box-shadow: none;
+}
+
+.slider-wrapper {
+  width: 500px;
+  margin: 70px auto 0;
+}
+
+.date {
+  margin: 10px 0 15px;
+}
+
+#slider li {
+  min-height: 200px;
+  padding: 10px;
+}

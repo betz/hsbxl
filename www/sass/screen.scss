@@ -71,6 +71,14 @@ h1 {
   }
 }
 
+.frontprojects {
+  ul {
+    -moz-column-count:2; /* Firefox */
+    -webkit-column-count:2; /* Safari and Chrome */
+    column-count:2;
+  }
+}
+
 .gallery {
   img {
     height: 60px;
@@ -83,6 +91,23 @@ h1 {
 .footer {
   font-size: 12px;
   font-style: italic;
+}
+
+.connect {
+  a {
+    width: 64px; height: 64px;
+    display: inline-block;
+    text-indent: -9999px;
+  }
+  .facebook {
+    background: url(../images/social_media/facebook.png) no-repeat;
+  }
+  .twitter {
+    background: url(../images/social_media/twitter.png) no-repeat;
+  }
+  .youtube {
+    background: url(../images/social_media/youtube.png) no-repeat;
+  }
 }
 
 @media (max-width: 600px) {

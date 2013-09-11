@@ -78,6 +78,15 @@ h1 {
 }
 
 /* line 75, ../sass/screen.scss */
+.frontprojects ul {
+  -moz-column-count: 2;
+  /* Firefox */
+  -webkit-column-count: 2;
+  /* Safari and Chrome */
+  column-count: 2;
+}
+
+/* line 83, ../sass/screen.scss */
 .gallery img {
   height: 60px;
   float: left;
@@ -85,26 +94,46 @@ h1 {
   margin-bottom: 5px;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 .footer {
   font-size: 12px;
   font-style: italic;
 }
 
+/* line 97, ../sass/screen.scss */
+.connect a {
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+  text-indent: -9999px;
+}
+/* line 102, ../sass/screen.scss */
+.connect .facebook {
+  background: url(../images/social_media/facebook.png) no-repeat;
+}
+/* line 105, ../sass/screen.scss */
+.connect .twitter {
+  background: url(../images/social_media/twitter.png) no-repeat;
+}
+/* line 108, ../sass/screen.scss */
+.connect .youtube {
+  background: url(../images/social_media/youtube.png) no-repeat;
+}
+
 @media (max-width: 600px) {
-  /* line 89, ../sass/screen.scss */
+  /* line 114, ../sass/screen.scss */
   #myCarousel {
     display: none;
   }
 }
 @media (min-width: 1200px) {
-  /* line 96, ../sass/screen.scss */
+  /* line 121, ../sass/screen.scss */
   .navbar-form input {
     width: 156px;
   }
 }
 @media (max-width: 979px) {
-  /* line 104, ../sass/screen.scss */
+  /* line 129, ../sass/screen.scss */
   body {
     padding-top: 0;
     padding-bottom: 20px;

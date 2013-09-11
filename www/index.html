@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="hsbxl">
   <head>
     <meta charset="utf-8">
     <title>Hackerspace Brussels | HSBXL</title>
@@ -23,66 +23,77 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="/">HSBXL</a>
+          <a class="brand" href="index.html">HSBXL</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
+              <li class="active"><a href="index.html">Home</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="what-is-hackerspace.html">What is a hackerspace?</a></li>
-                  <li><a href="#">Who are we?</a></li>
-                  <li><a href="#">Meetings and events</a></li>
+                  <li><a href="index.html">Meetings and events</a></li>
                   <li class="divider"></li>
                   <li class="nav-header">Membership</li>
-                  <li><a href="#">Benefits of members</a></li>
-                  <li><a href="#">Become a member</a></li>
-                  <li><a href="#">Our rules</a></li>
+                  <li><a href="member-benefits.html">Member benefits</a></li>
+                  <li><a href="become-member.html">Become a member</a></li>
                 </ul>
               </li>
 
+              <!--.
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="projects.html">Projects</a></li>
-                  <li><a href="#">Projects archive</a></li>
+                  <li><a href="projects-archived.html">Projects archive</a></li>
                   <li class="divider"></li>
                   <li class="nav-header">Your project</li>
-                  <li><a href="#">Start your own project</a></li>
-                  <li><a href="#"></a></li>
+                  <li><a href="projects-start-your-own.html">Start your own project</a></li>
+                </ul>
+              </li>
+              -->
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Wiki <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://hackerspace.be/Hackerspace_Brussels">Wiki HSBXL</a></li>
+                  <li><a href="https://hackerspace.be/Become_a_member">Create wiki user account</a></li>
+                  <li><a href="https://hackerspace.be/Special:RecentChanges">Latest wiki updates</a></li>
                 </ul>
               </li>
 
+              <!--
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Upcoming events</a></li>
-                  <li><a href="#">Past events</a></li>
+                  <li><a href="events.html">Upcoming events</a></li>
+                  <li><a href="events-past.html">Past events</a></li>
                   <li class="divider"></li>
                   <li class="nav-header">Use the space</li>
-                  <li><a href="#">Get in touch</a></li>
+                  <li><a href="https://hackerspace.be/Contact">Get in touch</a></li>
                 </ul>
               </li>
+              -->
+
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Get in touch</a></li>
-                  <li><a href="#">Media</a></li>
+                  <li><a href="https://hackerspace.be/Contact">Get in touch</a></li>
+                  <li><a href="https://hackerspace.be/Mailing-list">Discussion mailing list</a></li>
+                  <li><a href="https://hackerspace.be/Hsb-in-the-media">Media</a></li>
                 </ul>
               </li>
+
+              <!--
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Donate <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Material</a></li>
-                  <li><a href="#">Financial</a></li>
+                  <li><a href="donate-material.html">Material</a></li>
+                  <li><a href="donate-financial.html">Financial</a></li>
                 </ul>
               </li>
+              -->
+
             </ul>
-            <form class="navbar-form pull-right">
-              <input class="span2" type="text" placeholder="Email">
-              <input class="span2" type="password" placeholder="Password">
-              <button type="submit" class="btn">Sign in</button>
-            </form>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -108,26 +119,36 @@
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span4">
-          <h2>Projects</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="projects.html">View projects &raquo;</a></p>
+        <div class="span4" ng-controller="EventsCtrl">
+          <h2>Upcoming Events</h2>
+          <ul>
+            <li ng-repeat="event in events | orderObjectBy:'start' ">
+              <strong>{{event.printouts['Start date'][0]}}: </strong>
+              <a href="{{event.fullurl}}">{{event.fulltext}}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="span4 frontprojects" ng-controller="ProjectsCtrl">
+          <h2>Running Projects</h2>
+          <ul>
+            <li ng-repeat="project in projects | orderObjectBy:'fulltext' ">
+              <a href="{{project.fullurl}}">{{project.fulltext}}</a>
+            </li>
+          </ul>
         </div>
         <div class="span4">
-          <h2>Discussions</h2>
-          <p>Discussions from the projects</p>
-          <ul>
-            <li><a href="#">Linkbot: certainly fun for those that like robotics</a></li>
-            <li><a href="#">Door lock</a></li>
-            <li><a href="#">Removing the junk in the garden: renting a container this weekend</a></li>
-            <li><a href="#">Create truly natural objects by making 3D curves instead of 2D layers</a></li>
-          </ul>
-          <p><a class="btn" href="#">View all discussions &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Events</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View events &raquo;</a></p>
+          <h2>Spacewatch</h2>
+          <p>Who is currently connected to our network? Pamela will tell you just that.</p>
+          <p><a class="btn btn-primary btn-mini" href="https://hackerspace.be/pam">Pamela &raquo;</a></p>
+          <h2>Connect</h2>
+          <div class="connect">
+            <a class="facebook" href="https://www.facebook.com/groups/hsbxl/">Facebook</a>
+            <a class="twitter" href="https://twitter.com/hsbxl">Twitter</a>
+            <a class="youtube" href="http://www.youtube.com/channel/UCNDtUaMEL7vldgxs1NyPm4Q">Youtube</a>
+          </div>
+          <h2>Discussion list</h2>
+          <p>Join the conversation on the HSBXL email discussion list.</p>
+          <p><a class="btn btn-primary btn-mini" href="https://hackerspace.be/Mailing-list">Subscribe &raquo;</a></p>
         </div>
       </div>
 
@@ -140,19 +161,15 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-transition.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-alert.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-modal.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-dropdown.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tab.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-tooltip.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-popover.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-button.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-collapse.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-carousel.js"></script>
-    <script src="http://twitter.github.io/bootstrap/assets/js/bootstrap-typeahead.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js"></script>
+    <script src="angular-grid/ng-grid-2.0.7.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+    <script src="js/hsbxl.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/events.js"></script>
 
   </body>
 </html>
