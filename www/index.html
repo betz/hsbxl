@@ -10,7 +10,13 @@
 
     <!-- Le styles -->
     <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
+    <noscript><style> 
+      .jsonly { display: none }
+      .nojs { display: block;}
+      .dropdown:hover .dropdown-menu { display: block; top: 90%; }
+    </style></noscript>
   </head>
 
   <body>
@@ -107,7 +113,7 @@
           <div class="carousel-inner">
             <div class="active item">
               <h1>Learn. Do. Share.</h1>
-              <p>A hackerspace (also referred to as a hacklab, makerspace, or hackspace) is a community-operated workspace where people with common interests, often in computers, technology, science, digital art or electronic art, can meet, socialise and/or collaborate.</p>
+              <p>Hackerspace Brussels (HSBXL) is a space, dedicated to various aspects of constructive & creative hacking. The space is about 300 square meters, there is a little electronics lab with over 9000 components, a library, and lots of tools. You're always welcome to follow one of the workshops or come to the weekly Tuesday meetings, hack nights or other get-together events.</p>
               <p><a href="what-is-hackerspace.html" class="btn btn-primary btn-large">What is a hackerspace? &raquo;</a></p>
             </div>
           </div>
@@ -119,22 +125,26 @@
 
       <!-- Example row of columns -->
       <div class="row">
-        <div class="span4" ng-controller="EventsCtrl">
+        <div class="span4 frontevents" ng-controller="EventsCtrl">
           <h2>Upcoming Events</h2>
           <ul>
-            <li ng-repeat="event in events | orderObjectBy:'start' ">
+            <li class="jsonly" ng-repeat="event in events | orderObjectBy:'start' ">
               <strong>{{event.printouts['Start date'][0]}}: </strong>
               <a href="{{event.fullurl}}">{{event.fulltext}}</a>
             </li>
           </ul>
+          <p class="nojs">You don't have javascript enabled.</p>
+          <p class="nojs"><a class="btn btn-primary btn-mini" href="https://hackerspace.be/Hackerspace_Brussels">Goto Wiki &raquo;</a></p>
         </div>
         <div class="span4 frontprojects" ng-controller="ProjectsCtrl">
           <h2>Running Projects</h2>
           <ul>
-            <li ng-repeat="project in projects | orderObjectBy:'fulltext' ">
+            <li class="jsonly" ng-repeat="project in projects | orderObjectBy:'fulltext' ">
               <a href="{{project.fullurl}}">{{project.fulltext}}</a>
             </li>
           </ul>
+          <p class="nojs">You don't have javascript enabled.</p>
+          <p class="nojs"><a class="btn btn-primary btn-mini" href="https://hackerspace.be/Projects">Goto Wiki &raquo;</a></p>
         </div>
         <div class="span4">
           <h2>Spacewatch</h2>
