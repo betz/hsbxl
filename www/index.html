@@ -116,6 +116,11 @@
               <p>Hackerspace Brussels (HSBXL) is a space, dedicated to various aspects of constructive & creative hacking. The space is about 300 square meters, there is a little electronics lab with over 9000 components, a library, and lots of tools. You're always welcome to follow one of the workshops or come to the weekly Tuesday meetings, hack nights or other get-together events.</p>
               <p><a href="what-is-hackerspace.html" class="btn btn-primary btn-large">What is a hackerspace? &raquo;</a></p>
             </div>
+            <!-- <div class="item">
+              <h1>Hackerspaces in Belgium</h1>
+              <p>Sometimes we forget that we are not alone. Have a look at other hackerspaces in Belgium.</p>
+              <p><a href="what-is-hackerspace.html" class="btn btn-primary btn-large">What is a hackerspace? &raquo;</a></p>
+            </div>-->
           </div>
         </div>
         <!-- Carousel nav -->
@@ -128,9 +133,9 @@
         <div class="span4 frontevents" ng-controller="EventsCtrl">
           <h2>Upcoming Events</h2>
           <ul>
-            <li class="jsonly" ng-repeat="event in events | orderObjectBy:'start' ">
-              <strong>{{event.printouts['Start date'][0]}}: </strong>
-              <a href="{{event.fullurl}}">{{event.fulltext}}</a>
+            <li class="jsonly event" ng-repeat="event in events | orderObjectBy:'start' ">
+              <span class="eventDate"><strong>{{event.printouts['Start date'][0]}}: </strong></span>
+              <a class="value" href="{{event.fullurl}}">{{event.fulltext}}</a>
             </li>
           </ul>
           <p class="nojs">You don't have javascript enabled.</p>

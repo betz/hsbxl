@@ -119,6 +119,29 @@ h1 {
   position: static;
 }
 
+.frontevents {
+  ul {
+    margin: 0;
+    .event {
+      list-style-type: none;
+      overflow: hidden;
+      .eventDate {
+        width: 55px;
+        height: 20px;
+        float: left;
+        padding-bottom: 500em;
+        margin-bottom: -500em;
+      }
+      .value {
+        width: 70%;
+        float: left;
+        padding-bottom: 500em;
+        margin-bottom: -500em;
+      }
+    }
+  }
+}
+
 @media (min-width: 585px) and (max-width: 767px) {
   .frontevents ul{
     -moz-column-count:2; /* Firefox */
